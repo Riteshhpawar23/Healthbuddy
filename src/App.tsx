@@ -10,6 +10,10 @@ import ConsultationPage from "./pages/consultation";
 import MusicPage from "./pages/MusicPage";
 import DoodlePage from "./pages/DoodlePage";
 import JournalPage from "./pages/JournalPage";
+import ExercisePage from "./pages/ExercisePage";
+import QuotesPage from "./pages/QuotesPage";
+import StreaksPage from "./pages/StreaksPage";
+import TeamPage from "./pages/TeamPage";
 
 import LoadingPage from "./components/LoadingPage";
 
@@ -35,6 +39,10 @@ const App = () => {
           <Route path="/music" element={<MusicPage />} />
           <Route path="/doodle" element={<DoodlePage />} />
           <Route path="/journal" element={<JournalPage />} />
+          <Route path="/exercises" element={<ExercisePage />} />
+          <Route path="/write" element={<QuotesPage />} />
+          <Route path="/tags" element={<StreaksPage />} />
+          <Route path="/team" element={<TeamPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
