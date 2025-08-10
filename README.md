@@ -1,73 +1,90 @@
-# Welcome to your Lovable project
+# Healthbuddy 🧘‍♂️💬
 
-## Project info
+*Find Your Calm in the Chaos.*
 
-**URL**: https://lovable.dev/projects/9ec761e8-d427-417e-8ea7-d58aff3d8efb
+Healthbuddy is an AI-powered mental wellness companion designed to provide a safe, supportive, and interactive space. It's a place to understand your feelings, learn coping strategies, and connect with resources that can help. You are not alone on your wellness journey.
 
-## How can I edit this code?
+## ✨ Key Features
 
-There are several ways of editing your application.
+* *🧠 AI-Powered Chat:* Engage in meaningful conversations with Healthbuddy, an AI fine-tuned to understand and discuss mental wellness topics in a safe and supportive manner.
+* *⚕️ Doctor Consultation:* Easily find and get contact information for qualified healthcare professionals in various specialties.
+* *🎨 Doodle Interface:* A creative outlet to express yourself through drawing with various tools and colors.
+* *🎵 Music Therapy:* A curated library of calming music and nature sounds to help you relax, focus, or sleep.
+* *📓 Digital Journaling:* A private and secure space to write down your thoughts, track your mood, and reflect on your day.
 
-**Use Lovable**
+## 🚀 Technology Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9ec761e8-d427-417e-8ea7-d58aff3d8efb) and start prompting.
+This project combines a modern frontend with a powerful, fine-tuned AI backend.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
 
-**Use your preferred IDE**
+* *Framework:* [React](https://react.dev/) with [Vite](https://vitejs.dev/)
+* *Language:* [TypeScript](https://www.typescriptlang.org/)
+* *UI Components:* [shadcn/ui](https://ui.shadcn.com/)
+* *Styling:* [Tailwind CSS](https://tailwindcss.com/)
+* *Routing:* [React Router](https://reactrouter.com/)
+* *State Management:* [TanStack Query](https://tanstack.com/query/)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Backend
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* *Framework:* [FastAPI](https://fastapi.tiangolo.com/)
+* *Language Model:* A fine-tuned *Phi-3 Mini* model.
+* *Fine-Tuning:* Optimized using *QLoRA* for 4-bit precision.
+* *AI Pipeline:* Utilizes a *Retrieval-Augmented Generation (RAG)* pipeline with a Vector Database, trained on over 20,000 health-related conversations.
+* *Safety:* Incorporates PII and safety filters.
+* *Deployment:* Served via a secure tunnel using *Cloudflare*.
 
-Follow these steps:
+## ⚙️ Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Follow these instructions to get a local copy up and running for development and testing purposes.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
 
-# Step 3: Install the necessary dependencies.
-npm i
+* Node.js (v18.0.0 or higher)
+* npm (or your preferred package manager like Yarn, pnpm)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Installation & Setup
 
-**Edit a file directly in GitHub**
+1.  *Clone the repository:*
+    sh
+    git clone [https://github.com/riteshhpawar23/healthbuddy.git](https://github.com/riteshhpawar23/healthbuddy.git)
+    
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+2.  *Navigate to the project directory:*
+    sh
+    cd healthbuddy/Healthbuddy-da8a705c5b97aa658e5e487d632b40202e5e671d
+    
 
-**Use GitHub Codespaces**
+3.  *Install frontend dependencies:*
+    sh
+    npm install
+    
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+4.  *Set up environment variables:*
+    Create a .env file in the root of the project (Healthbuddy-da8a705c5b97aa658e5e487d632b40202e5e671d). This file will store your API endpoint and key.
 
-## What technologies are used for this project?
+    env
+    # The URL of your FastAPI backend
+    VITE_API_BASE_URL=[http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-This project is built with:
+    # Your API Key for the backend service
+    VITE_API_KEY=your_secret_api_key_here
+    
+    Note: The frontend is configured to proxy requests from /api to the VITE_API_BASE_URL. Refer to vite.config.ts for details.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Running the Application
 
-## How can I deploy this project?
+1.  *Start the frontend development server:*
+    sh
+    npm run dev
+    
+2.  Open your browser and navigate to http://localhost:8080 (or the port specified in your terminal).
 
-Simply open [Lovable](https://lovable.dev/projects/9ec761e8-d427-417e-8ea7-d58aff3d8efb) and click on Share -> Publish.
+## Scripts
 
-## Can I connect a custom domain to my Lovable project?
+* npm run dev: Starts the development server.
+* npm run build: Builds the app for production.
+* npm run lint: Lints the code using ESLint.
+* npm run preview: Serves the production build locally.
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🤝 Made by Strawhats
