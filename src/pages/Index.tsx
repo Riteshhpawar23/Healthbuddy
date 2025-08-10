@@ -1,5 +1,5 @@
 import AppSidebar from "@/components/Sidebar";
-import ChatInterface from "@/components/ChatInterface";
+import WorkingChatInterface from "@/components/WorkingChatInterface";
 import MobileHeader from "@/components/MobileHeader";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { useEffect, useRef, useState } from "react";
@@ -58,7 +58,7 @@ const Index = () => {
           <AppSidebar />
           <div className="flex-1 flex flex-col">
             <MobileHeader />
-            <ChatInterface themeColors={themeColors} />
+            <WorkingChatInterface themeColors={themeColors} />
           </div>
         </div>
       </div>
