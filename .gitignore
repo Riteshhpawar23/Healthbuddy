@@ -19,6 +19,9 @@ dist-ssr
 .env.test.local
 .env.production.local
 
+# Deployment documentation with sensitive info
+DEPLOYMENT.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
