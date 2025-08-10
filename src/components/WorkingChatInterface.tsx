@@ -59,13 +59,17 @@ export default function WorkingChatInterface({ themeColors }: ChatInterfaceProps
     setIsLoading(true);
 
     try {
-      console.log('🚀 Sending to API via proxy...');
+      console.log('🚀 Sending to API...');
       
-      const response = await fetch('/api/query', {
+      // Use Vercel API route in production, proxy in development
+      const apiEndpoint = window.location.hostname === 'localhost' 
+        ? '/api/query' 
+        : '/api/query';
+      
+      const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "x-api-key": import.meta.env.VITE_API_KEY || '819882324e0b73f1d1cefb5f466b6c1f6b34b33f0d264183f8d5860bfd4a3918'
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ query: userMessage.content })
       });
