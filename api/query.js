@@ -24,12 +24,19 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Query is required' });
     }
 
+    // Get API key from environment variables
+    const apiKey = process.env.API_KEY;
+    
+    if (!apiKey) {
+      return res.status(500).json({ error: 'API key not configured' });
+    }
+
     // Forward request to your external API
     const response = await fetch('https://going-attacks-discretion-gui.trycloudflare.com/query', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': process.env.VITE_API_KEY || '819882324e0b73f1d1cefb5f466b6c1f6b34b33f0d264183f8d5860bfd4a3918'
+        'x-api-key': apiKey
       },
       body: JSON.stringify({ query })
     });
