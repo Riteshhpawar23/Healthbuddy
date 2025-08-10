@@ -27,12 +27,22 @@ export default async function handler(req, res) {
     // Get API key from environment variables
     const apiKey = process.env.API_KEY;
     
+    // Debug logging
+    console.log('Environment variables check:');
+    console.log('API_KEY exists:', !!apiKey);
+    console.log('API_KEY length:', apiKey ? apiKey.length : 0);
+    
     if (!apiKey) {
-      return res.status(500).json({ error: 'API key not configured' });
+      console.error('API_KEY not found in environment variables');
+      return res.status(500).json({ 
+        error: 'API key not configured',
+        debug: 'Environment variable API_KEY is missing'
+      });
     }
 
     // Forward request to your external API
-    const response = await fetch('https://going-attacks-discretion-gui.trycloudflare.com/query', {
+    console.log('Making request to external API...');
+    const response = await fetch('https://decline-terminal-lens-belt.trycloudflare.com/query', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,8 +51,12 @@ export default async function handler(req, res) {
       body: JSON.stringify({ query })
     });
 
+    console.log('External API response status:', response.status);
+
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
+      const errorText = await response.text();
+      console.error('External API error:', errorText);
+      throw new Error(`API error: ${response.status} - ${errorText}`);
     }
 
     const data = await response.json();

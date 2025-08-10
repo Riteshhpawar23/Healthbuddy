@@ -4,9 +4,6 @@
       "maxDuration": 30
     }
   },
-  "env": {
-    "API_KEY": "@api_key"
-  },
   "headers": [
     {
       "source": "/api/(.*)",
