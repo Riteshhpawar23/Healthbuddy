@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     proxy: {
       '/api': {
-        target: 'https://decline-terminal-lens-belt.trycloudflare.com',
+        target: 'https://encourage-crucial-francis-establishment.trycloudflare.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
         configure: (proxy, _options) => {

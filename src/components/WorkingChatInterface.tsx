@@ -73,7 +73,7 @@ export default function WorkingChatInterface({ themeColors }: ChatInterfaceProps
         },
         body: JSON.stringify({ query: userMessage.content })
       });
-
+      
       console.log('📡 Response status:', response.status);
 
       if (!response.ok) {
@@ -81,9 +81,7 @@ export default function WorkingChatInterface({ themeColors }: ChatInterfaceProps
       }
 
       const data = await response.json();
-      console.log('✅ API Response:', data);
-      
-      const aiMessage = {
+      console.log('✅ API Response:', data);      const aiMessage = {
         id: `msg_${Date.now()}_ai`,
         content: data.answer || "No response received",
         sender: 'ai' as const

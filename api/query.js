@@ -42,7 +42,7 @@ export default async function handler(req, res) {
 
     // Forward request to your external API
     console.log('Making request to external API...');
-    const response = await fetch('https://decline-terminal-lens-belt.trycloudflare.com/query', {
+    const response = await fetch('https://encourage-crucial-francis-establishment.trycloudflare.com/query', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
