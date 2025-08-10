@@ -49,7 +49,7 @@ export default function AppSidebar() {
   const isActive = (path: string) => currentPath === path;
 
   return (
-  <Sidebar className="border-r border-border bg-transparent">
+  <Sidebar className="border-r border-border bg-white/80 fixed top-0 left-0 h-screen z-30 shadow-lg backdrop-blur-md">
       {/* Header */}
       <SidebarHeader className="border-b border-border p-4">
         <div className="flex items-center gap-3">

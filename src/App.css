@@ -37,6 +37,23 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes rays {
+  0% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+  100% { opacity: 0.15; }
+}
+
+.animate-rays {
+  animation: rays 8s ease-in-out infinite;
 }

@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ConsultationPage from "./pages/consultation";
 import MusicPage from "./pages/MusicPage";
+import DoodlePage from "./pages/DoodlePage";
+import JournalPage from "./pages/JournalPage";
 
 import LoadingPage from "./components/LoadingPage";
 
@@ -30,8 +32,9 @@ const App = () => {
           <Route path="/" element={<Index />} />
           {/** Import ConsultationPage directly for routing */}
           <Route path="/consultation" element={<ConsultationPage />} />
-          {/** Music Page Route */}
           <Route path="/music" element={<MusicPage />} />
+          <Route path="/doodle" element={<DoodlePage />} />
+          <Route path="/journal" element={<JournalPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

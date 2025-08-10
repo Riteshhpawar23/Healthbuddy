@@ -1,0 +1,73 @@
+/* DoodleInterface.css */
+.doodle-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(120deg, #A7C7E7 0%, #B7E4C7 50%, #F5E6C4 100%);
+  animation: gradientFlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.doodle-toolbar {
+  display: flex;
+  gap: 1rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  align-items: center;
+}
+
+.doodle-toolbar button {
+  border: none;
+  background: #eee;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.doodle-toolbar button.active {
+  background: #B7E4C7;
+  font-weight: bold;
+}
+.doodle-toolbar button[style] {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 0;
+  border: 2px solid #fff;
+}
+
+.ambient-icon {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #A7C7E7;
+}
+
+.doodle-prompt {
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.2rem;
+  color: #4A6FA5;
+  background: rgba(255,255,255,0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+}
+
+.doodle-canvas {
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.9);
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  cursor: crosshair;
+}
